@@ -1,0 +1,7 @@
+scr_docs/README
+===============
+
+This directory contains the hsc-sources for the documentation.
+
+I've included them to also provide a quite complex example, that
+uses nearly every feature of hsc.
