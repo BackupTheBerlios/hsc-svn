@@ -1,0 +1,43 @@
+
+hsc source archive
+==================
+
+This archive contains the sources for hsc. They are distributed under
+GNU General Public License (for details, see file "COPYING" in this
+directory).
+
+IMPORTANT: If you've compiled older versions of hsc before, remove 
+all files of the old sources before you continue.
+
+There are two makefiles:
+
+"Makefile.dodl" is designed to compile with CC under an Unix-esh 
+environment without any special options or debugging-features enabled.
+
+"Makefile", which uses conditionals for figuring out the compiler and
+environment, 
+
+At the moment, only AmigaOS and Unix are supported. For AmigaOS, you
+require GCC or SAS/c, for Unix,  GCC and CC are supported.
+
+This makefile supports three compilation modes: "debug" for a
+debugging version that includes all debugging information, supports
+a source-level memory-tracking and enables some additional output
+and plausibility checks. "norm" links only some debugging information,
+and "optim" strips all debugging information and creates an optimized
+executable; with some compilers, "optim" migth cause problems.
+
+Normally, no warnings should show up, expect about ununsed functions
+and parameters. This is because some parameters and functions are
+only used by the debugging-version.
+
+Problems might occure, if your compiler does not support ANSI-C
+(as "cc" under SunOS on my university - Pfthuahuhahua!), but I won't
+care about this.
+
+If nothing went wrong, you now should have created two files called
+"hsc/hsc" and "hscdepp/hscdepp" which are the executables. Now follow
+the installation instructions of the documentation that came with the 
+main-archive.
+
+Thomas Aglassinger <agi@giga.or.at>
